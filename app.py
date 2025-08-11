@@ -20,7 +20,7 @@ class ResponseObjects(BaseModel):
 
 class InferlessPythonModel:
     def initialize(self):
-        self.pipe = pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-Krea-dev", torch_dtype=torch.bfloat16).to("cuda")
+        self.pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-Krea-dev", torch_dtype=torch.bfloat16).to("cuda")
 
     def infer(self, inputs: RequestObjects) -> ResponseObjects:
         image = self.pipe(
