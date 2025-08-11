@@ -1,0 +1,7 @@
+build:
+  cuda_version: "12.1.1"
+  python_packages:
+    - "torch"
+    - "diffusers"
+    - "hf-transfer"
+    - "huggingface-hub"
